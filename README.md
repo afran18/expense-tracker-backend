@@ -102,7 +102,7 @@ expense-tracker-backend/
 ├── keycloak/                       # infra, not a Maven module
 │   ├── Dockerfile
 │   ├── realm-export/
-│   │   └── expense-realm.json      # clients, roles, test users
+│   │   └── expense-realm-realm.json      # clients, roles, test users
 │   └── themes/                     # optional custom login theme
 │
 └── microservices/
