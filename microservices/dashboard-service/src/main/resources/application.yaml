@@ -1,8 +1,15 @@
+server:
+  port: 8083
+  servlet:
+    context-path: /api
+
 spring:
   application:
     name: dashboard-service
-server:
-  port: 8083
+  profiles:
+    default: local
+  config:
+    import: optional:file:../../.env[.properties]
 
 management:
   endpoints:

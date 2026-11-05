@@ -1,19 +1,15 @@
+server:
+  port: 8082
+  servlet:
+    context-path: /api
+
 spring:
   application:
     name: expense-service
-  datasource:
-    url: jdbc:h2:mem:expensedb;MODE=PostgreSQL;DB_CLOSE_DELAY=-1
-    username: sa
-    password:
-    h2:
-      console:
-        enabled: true      # optional, at /h2-console (needs a security permitAll to open)
-    jpa:
-      hibernate:
-        ddl-auto: validate   # Flyway owns the schema, Hibernate only checks it
-
-server:
-  port: 8082
+  profiles:
+    default: local
+  config:
+    import: optional:file:../../.env[.properties]
 
 management:
   endpoints:
